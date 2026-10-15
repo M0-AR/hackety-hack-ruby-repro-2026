@@ -1,0 +1,25 @@
+{
+  "fetched_utc": "2026-10-15T13:47:04.645116",
+  "gems": {
+    "rails": {
+      "downloads": 801371542,
+      "version": "8.1.4",
+      "version_downloads": 1632759
+    },
+    "scarpe": {
+      "downloads": 6244,
+      "version": "0.5.0",
+      "version_downloads": 413
+    },
+    "lacci": {
+      "downloads": 4556,
+      "version": "0.5.0",
+      "version_downloads": 642
+    },
+    "shoes": {
+      "downloads": 75247,
+      "version": "3.0.1",
+      "version_downloads": 36304
+    }
+  }
+}

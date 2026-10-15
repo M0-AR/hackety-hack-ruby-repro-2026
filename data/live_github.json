@@ -1,0 +1,29 @@
+{
+  "fetched_utc": "2026-10-15T13:47:09.632207",
+  "repos": {
+    "rails/rails": {
+      "stars": 58838,
+      "forks": 25348,
+      "pushed_at": "2026-10-15T13:34:40Z",
+      "language": "Ruby"
+    },
+    "scarpe-team/scarpe": {
+      "stars": 253,
+      "forks": 34,
+      "pushed_at": "2026-10-01T22:25:28Z",
+      "language": "Ruby"
+    },
+    "shoes/shoes4": {
+      "stars": 1608,
+      "forks": 188,
+      "pushed_at": "2023-11-17T21:43:57Z",
+      "language": "Ruby"
+    },
+    "hacketyhack/hacketyhack": {
+      "stars": 456,
+      "forks": 128,
+      "pushed_at": "2026-07-31T00:57:04Z",
+      "language": "Ruby"
+    }
+  }
+}
