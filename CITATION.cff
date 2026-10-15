@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "From _why to 2026: Reproducibly Benchmarking Hackety Hack, Ruby and the Beginner-Programming Ecology"
+version: 1.0.0
+date-released: 2026-10-15
+authors:
+  - family-names: "Repro Study"
+    given-names: "Hackety Hack Ruby"
+license: MIT
+repository-code: "https://example.invalid/hackety-hack-ruby-repro-2026"
+keywords:
+  - ruby
+  - shoes
+  - scarpe
+  - hackety-hack
+  - computing-education
+  - reproducible-research
+preferred-citation:
+  type: unpublished
+  title: "From _why to 2026 (preprint draft, live-verified 2026-10-15)"
+  year: 2026

@@ -1,0 +1,30 @@
+services:
+  research:
+    build: .
+    container_name: hackety-research
+    volumes:
+      - ./data:/work/data
+      - ./results:/work/results
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=UTC
+    command: bash run_all.sh
+
+  ruby:
+    image: ruby:3.3-slim
+    container_name: hackety-ruby
+    working_dir: /work
+    volumes:
+      - ./experiments:/work/experiments
+      - ./results:/work/results
+    command: bash -c "ruby -v && ls /work/experiments"
+
+  notebook:
+    image: jupyter/minimal-notebook:python-3.12
+    container_name: hackety-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+    profiles: ["notebook"]

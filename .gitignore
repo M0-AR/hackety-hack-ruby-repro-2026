@@ -1,0 +1,7 @@
+.git/
+__pycache__/
+*.pyc
+data/live_*.json
+results/*.png
+.ipynb_checkpoints/
+.venv/

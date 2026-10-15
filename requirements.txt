@@ -1,0 +1,7 @@
+# hackety-hack-ruby-repro-2026
+Python deps for live-verification (no API keys required).
+requests>=2.31
+pandas>=2.0
+matplotlib>=3.8
+scipy>=1.11
+numpy>=1.26
