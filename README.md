@@ -79,9 +79,19 @@ You will know more than most interview candidates: terseness vs scale, search-sh
 
 ## 🌐 Live website + quiz (`preview.html` + `docs/`)
 
-- Open **`preview.html`** locally (double-click) or serve the Pages site: **`docs/index.html`** is the entry file.
-- **Enable GitHub Pages (2026):** push repo → GitHub **Settings → Pages → Source: Deploy from a branch → `main` → `/docs` → Save** (`docs/.nojekyll` already disables Jekyll). Visit `https://<you>.github.io/<repo>/` in ~1 min.
+- Open **`preview.html`** locally (double-click) — it works with no server. Click through to the [3-minute quiz](preview.html#quiz).
+- **Enable GitHub Pages (2026):** push repo → GitHub **Settings → Pages → Source: Deploy from a branch → `main` → `/docs` (recommended) → Save**. `.nojekyll` is present at both `/` and `/docs` so files serve statically. Wait 1–2 min, check the Actions “pages build and deployment” run, then probe below.
 - The page includes: CEO cards, GIF, charts, beginner steps, feature table, **8-question interactive quiz** (score ≥6 = pro), reproduce + Pages instructions. Quiz verified headless: clicking correct answers yields `Score: 8 / 8 — pro level 🎓`.
+
+### 🔗 Clickable links — which URL renders under which setting
+
+| Link (click me) | Source `/docs` (recommended) | Source `/` (root) |
+|---|---|---|
+| [🌐 Site home `/`](docs/index.html) | `https://<you>.github.io/<repo>/` → 200 ✅ | `https://<you>.github.io/<repo>/` → 200 (root `index.html` redirect) ✅ |
+| [▶ Interactive page `/preview.html`](preview.html) | `https://<you>.github.io/<repo>/preview.html` → 200 ✅ | `https://<you>.github.io/<repo>/preview.html` → 200 ✅ |
+| [📄 Canonical page `/docs/preview.html`](docs/preview.html) | `https://<you>.github.io/<repo>/preview.html` (same content, mirrored) | `https://<you>.github.io/<repo>/docs/preview.html` → 200 ✅ |
+
+> Rule: the entry file must sit at the top level of the chosen source. That is why this repo ships **both** `docs/index.html` (entry for `/docs`) **and** root `index.html` (redirect for `/`), plus identical `docs/preview.html` and root `preview.html` (asset paths only: `../assets/` vs `assets/`). A green “Deployed” badge only proves *something* built — use the table above to prove *your path* exists.
 - Screenshots (captured from the real page, not mockups):
 
 ![Full page screenshot](assets/preview_fullpage.png)
@@ -107,7 +117,7 @@ docker compose up research
 ```
 experiments/01..08 + verify_book_claims.rb
 assets/turtle_square.gif verbosity.png live_scale.png pedagogy.png preview_*.png
-docs/index.html (.nojekyll)  preview.html (root mirror)
+docs/index.html + docs/preview.html (.nojekyll)  preview.html (root mirror)  index.html (root redirect)  .nojekyll (root)
 README.md  PAPER.md  data/live_*.json  results/*.csv *.md
 docker-compose.yml  Dockerfile  run_all.sh
 ```
